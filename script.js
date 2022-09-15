@@ -31,7 +31,7 @@ const typeController = (e) => {
 
   // these are the valid character we are allowing to type
   const validLetters =
-    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ  1234567890!@#$%^&*()_+-={}[]'\".,?";
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890!@#$%^&*()_+-={}[]'\".,?";
 
   // if it is not a valid character like Control/Alt then skip displaying anything
   if (!validLetters.includes(newLetter)) {
@@ -70,7 +70,6 @@ const gameOver = () => {
   const finishTime = new Date().getTime();
   const timeTaken = (finishTime - startTime) / 1000;
   const roundTime = Math.floor(timeTaken);
-  // console.log(roundTime);
 
   // show result modal
   resultModal.innerHTML = "";
@@ -87,7 +86,6 @@ const gameOver = () => {
     <p class="margin-bottom">You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
-// console.log(questionText,timeTaken,errorCount);
   addHistory(questionText, roundTime, errorCount);
 
   // restart everything
