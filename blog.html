@@ -22,8 +22,17 @@
             background-color: #171717;
             color: white;
         }
+        main section{
+            padding: 20px;
+        }
         strong{
             font-size: 25px;
+        }
+        .blog{
+            border: 1px solid wheat;
+            margin-bottom: 10px;
+            border-radius: 15px;
+            padding: 10px;
         }
     </style>
 </head>
@@ -35,7 +44,7 @@
     </header>
     <main>
         <section>
-            <div>
+            <div class="blog">
                 <h1>Local Storage and Session Storage: What Are Their Uses?</h1>
                 <p>
                     <strong>Local storage:</strong> 
@@ -51,11 +60,48 @@
                     Session storage is unique to each browser tab. If you open a new tab and navigate to the same site, you'll start a new session with its own storage. However, if you use a "duplicate tab" feature in your browser, that may reuse the same session. You can't rely too much on the specific details of a "session". Instead, focus on the core concept: session storage is temporary.
                 </p>
             </div>
-            <div>
-                <h1></h1>
+            <div class="blog">
+                <h1>Global scope and Block scope in js</h1>
+                <p>
+                    <strong>Global Scope:</strong> 
+                    In a programming environment, the global scope is the scope that contains, and is visible in, all other scopes.
+                    In client-side JavaScript, the global scope is generally the web page inside which all the code is being executed. Variables declared outside of any function become global variables. Global variables can be accessed and modified from any function. <br><br>
+                    <strong>Block Scope:</strong> 
+                    Block scope is an area between two { curly braces } which can be between loops, if condition or switch statement. The let and const introduced in ES2015 allow us to create block scoped variables that can be accessed only inside those block.
+                </p>
             </div>
-            <div></div>
-            <div></div>
+            <div class="blog">
+                <h1>JS Event loop</h1>
+                <p>
+                    
+                    JavaScript is a single-threaded synchronous programming language. But what does it actually mean? What is this event loop in JavaScript that we all keep talking about? 
+                    What does it actually mean when we say JavaScript is single threaded?
+                    It means that the main thread where JavaScript code is run, runs in one line at a time manner and there is no possibility of running code in parallel. <br> <br>
+
+                    <strong>Event loop:</strong> An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty.
+                    The event loop is the secret by which JavaScript gives us an illusion of being multithreaded even though it is single-threaded. Here the callback function in the event queue has not yet run and is waiting for its time into the stack when the SetTimeOut() is being executed and the Web API is making the mentioned wait. This cycle is called the event loop and this how JavaScript manages its events.
+                </p>
+            </div>
+            <div class="blog">
+                <h1>Undefined in JS</h1>
+                <p>
+                    The global undefined property represents the primitive value undefined. It is one of JavaScript's primitive types. <br> <br>
+
+                    undefined is a property of the global object. That is, it is a variable in global scope. The initial value of undefined is the primitive value undefined. <br> <br>
+
+                    In all non-legacy browsers, undefined is a non-configurable, non-writable property. <br> <br>
+
+                    A variable that has not been assigned a value is of type undefined. A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value. A function returns undefined if a value was not returned. <br> <br>
+
+                    You can use undefined and the strict equality and inequality operators to determine whether a variable has a value. 
+
+                    One reason to use typeof is that it does not throw an error if the variable has not been declared. <br> <br>
+
+                    However, there is another alternative. JavaScript is a statically scoped language, so knowing if a variable is declared can be read by seeing whether it is declared in an enclosing context.
+
+                    The global scope is bound to the global object, so checking the existence of a variable in the global context can be done by checking the existence of a property on the global object, using the in operator, for instance.
+                </p>
+            </div>
         </section>
     </main>
 </body>
