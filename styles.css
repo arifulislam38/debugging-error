@@ -62,9 +62,9 @@ body {
   display: none;
 }
 #result {
-  position: fixed;
-  top: 10%; 
-  left: 10%;
+  position:absolute;
+  top: 50%; 
+  left: 50%;
   transform: translate(-50%, -50%);
   height: 250px;
   width: 400px;
@@ -80,7 +80,9 @@ body {
   color: white;
   margin: 10px 0;
 }
-
+.margin-bottom{
+  margin-bottom: 15px;
+}
 .green {
   color: #9dffad;
 }

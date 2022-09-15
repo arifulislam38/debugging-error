@@ -31,7 +31,7 @@ const typeController = (e) => {
 
   // these are the valid character we are allowing to type
   const validLetters =
-    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890!@#$%^&*()_+-={}[]'\".,?";
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ  1234567890!@#$%^&*()_+-={}[]'\".,?";
 
   // if it is not a valid character like Control/Alt then skip displaying anything
   if (!validLetters.includes(newLetter)) {
@@ -82,13 +82,13 @@ const gameOver = () => {
   display.classList.add("inactive");
   // show result
   resultModal.innerHTML += `
-    <h1>Finished!</h1>
-    <p>You took: <span class="bold">${roundTime}</span> seconds</p>
-    <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <h1 class="margin-bottom">Finished!</h1>
+    <p class="margin-bottom">You took: <span class="bold">${roundTime}</span> seconds</p>
+    <p class="margin-bottom">You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
 // console.log(questionText,timeTaken,errorCount);
-  addHistory(questionText, timeTaken, errorCount);
+  addHistory(questionText, roundTime, errorCount);
 
   // restart everything
   startTime = 0;
